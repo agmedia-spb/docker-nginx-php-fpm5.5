@@ -11,7 +11,7 @@ nginx -c $NGINX_CONF  -g 'daemon off;' 2>&1 &
 NGINX_PID=$!
 
 echo 'Starting PHP-FPM';
-php5.6-fpm -R -F -c $PHP_FPM_CONF 2>&1 &
+php-fpm5.6 -R -F -c $PHP_FPM_CONF 2>&1 &
 PHP_FPM_PID=$!
 
 trap "TRAPPED_SIGNAL=true; kill -15 $NGINX_PID; kill -15 $PHP_FPM_PID;" SIGTERM  SIGINT
