@@ -36,7 +36,7 @@ Addition:
 
 To pull from docker hub:
 
-`docker pull agmedia/docker-nginx-php-fpm7.0`
+`docker pull agmedia/docker-nginx-php-fpm5.6`
 
 ### Running
 ##### Simple run project 
